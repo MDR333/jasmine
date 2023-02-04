@@ -1,5 +1,6 @@
 {
   "AppSyncApiName": "jasmine",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2023-02-04T06:22:35.047Z"
 }
