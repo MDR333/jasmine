@@ -150,7 +150,6 @@ function App() {
     setNotes([]);
   };
   
-
   // layout of the app
   return (
     <View className="App">
