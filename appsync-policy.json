@@ -1,0 +1,14 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "appsync:GetGraphqlApi",
+                "appsync:CreateGraphqlApi",
+                "appsync:UpdateGraphqlApi"
+            ],
+            "Resource": "arn:aws:appsync:us-east-2:197174119088:apis/5wfsk6xnmnee7pmvf6i3sd72yy"
+        }
+    ]
+}
