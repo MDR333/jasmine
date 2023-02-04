@@ -13,7 +13,7 @@ import {
 import { createNote, updateNote, deleteNote } from './graphql/mutations';
 import { listNotes, getNote } from "./graphql/queries";
 
-// create
+// listNotes
 const listNotes = `query ListNotes {
   listNotes {
     items {
