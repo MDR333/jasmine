@@ -4,8 +4,16 @@
     "apiName": "jasmine",
     "serviceName": "AppSync",
     "defaultAuthType": {
-      "mode": "API_KEY",
-      "expirationTime": 7
-    }
+      "mode": "AWS_IAM"
+    },
+    "conflictResolution": {},
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 7,
+        "apiKeyExpirationDate": "2023-02-11T04:26:01.721Z",
+        "keyDescription": ""
+      }
+    ]
   }
 }
