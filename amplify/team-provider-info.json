@@ -17,9 +17,6 @@
       },
       "storage": {
         "imagestorage": {}
-      },
-      "api": {
-        "jasmine": {}
       }
     }
   }
