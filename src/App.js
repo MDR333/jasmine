@@ -10,10 +10,8 @@ import {
   View,
   withAuthenticator,
 } from '@aws-amplify/ui-react';
-import { createNote, updateNote, deleteNote } from './graphql/mutations';
-import { listNotes, getNote } from "./graphql/queries";
 
-// listNotes
+// create
 const listNotes = `query ListNotes {
   listNotes {
     items {
@@ -52,56 +50,7 @@ function App() {
 
   // fetch notes
   async function fetchNotes() {
-    
-    // list all notes
     const apiData = await API.graphql({ query: listNotes });
-    
-    // newNote
-    const newNote = await API.graphql({
-      query: createNote,
-      variables: {
-          input: {
-          "name": "Lorem ipsum dolor sit amet",
-          "description": "Lorem ipsum dolor sit amet",
-          "image": "Lorem ipsum dolor sit amet"
-         }
-        }
-    });
-
-    // updateNote
-    const updatedNote = await API.graphql({
-      query: updateNote,
-      variables: {
-          input: {
-        "name": "Lorem ipsum dolor sit amet",
-        "description": "Lorem ipsum dolor sit amet",
-        "image": "Lorem ipsum dolor sit amet"
-        }
-      }
-    });
-
-    // deleteNote
-    const deletedNote = await API.graphql({
-      query: deleteNote,
-      variables: {
-          input: {
-              id: "YOUR_RECORD_ID"
-          }
-      }
-    });
-
-    // list all items
-    const allNotes = await API.graphql({
-      query: listNotes
-    });
-    console.log(allNote);
-
-    // get a specific item
-    const oneNote = await API.graphql({
-      query: getNote,
-      variables: { id: 'YOUR_RECORD_ID' }
-    });
-
     const notesFromAPI = apiData.data.listNotes.items;
     await Promise.all(
       notesFromAPI.map(async (note) => {
@@ -150,6 +99,7 @@ function App() {
     setNotes([]);
   };
   
+
   // layout of the app
   return (
     <View className="App">
